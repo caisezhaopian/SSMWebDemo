@@ -16,11 +16,20 @@
     <!-- 开启注解扫描 service -->
     <context:component-scan base-package="org.caisezhaopian.SSMWebDemo.service" />
 
-    <!-- 配置的连接池对象 -->
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    <!-- 配置的连接池对象 ，只要有连接就新建一个connection，没有连接池的作用-->
+    <!--<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
         <property name="url" value="jdbc:mysql://127.0.0.1:3306/demo2"/>
         <property name="username" value="root"/>
+        <property name="password" value="12345678"/>
+    </bean>-->
+
+    <!--c3p0连接池-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <!-- 连接池4大组件 -->
+        <property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/demo2"/>
+        <property name="user" value="root"/>
         <property name="password" value="12345678"/>
     </bean>
 

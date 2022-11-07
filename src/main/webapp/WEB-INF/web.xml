@@ -5,7 +5,7 @@
                       https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
 		 version="5.0"
 		 metadata-complete="true">
-	<display-name>demo</display-name>
+	<display-name>SSMWebDemo</display-name>
 
 	<!-- 配置Spring的监听器 -->
 	<listener>
@@ -16,6 +16,10 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:config/springContext.xml</param-value>
 	</context-param>
+	<!--<context-param>
+		<param-name>c3p0DataSource</param-name>
+		<param-value>classpath:config/c3p0.properties</param-value>
+	</context-param>-->
 
 	<!-- springmvc前端控制器，spring MVC的核心就是DispatcherServlet，使用springMVC的第一步就是将下面的servlet放入web.xml
   		<servlet><servlet-name>名字唯一，默认情况下，DispatchServlet会加载<servlet-name>-servlet.xml的文件，

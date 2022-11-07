@@ -89,9 +89,9 @@
 
         <!-- c3p0数据连接池 -->
         <dependency>
-            <groupId>c3p0</groupId>
+            <groupId>com.mchange</groupId>
             <artifactId>c3p0</artifactId>
-            <version>0.9.1.2</version>
+            <version>0.9.5.5</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
