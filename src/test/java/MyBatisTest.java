@@ -26,8 +26,8 @@ public class MyBatisTest {
         //创建sqlSession
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
         AccountDao accountDao = sqlSession.getMapper(AccountDao.class);
-        Account accc = new Account(16,"qw", 12L);
-        accountDao.add(accc);
+        Account acc = new Account(2,"123", 123L);
+        accountDao.add(acc);
         //查询所有
         List<Account> accounts = accountDao.list();
         for (Account account : accounts) {
